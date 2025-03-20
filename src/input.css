@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer componets {
+    .br-shape {
+    clip-path: polygon(100% 0, 100% 96%, 36% 98%, 0 94%, 0 0);
+}
+
+}
