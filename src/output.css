@@ -53,6 +53,9 @@
 .flex-row {
   flex-direction: row;
 }
+.flex-wrap {
+  flex-wrap: wrap;
+}
 .items-center {
   align-items: center;
 }
@@ -64,6 +67,9 @@
 }
 .text-center {
   text-align: center;
+}
+.text-left {
+  text-align: left;
 }
 .underline {
   text-decoration-line: underline;
