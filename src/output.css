@@ -14,6 +14,7 @@
     --color-blue-800: oklch(0.424 0.199 265.638);
     --color-fuchsia-500: oklch(0.667 0.295 322.15);
     --color-gray-500: oklch(0.551 0.027 264.364);
+    --spacing: 0.25rem;
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
     --default-font-family: var(--font-sans);
@@ -208,6 +209,9 @@
   .top-\[763px\] {
     top: 763px;
   }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
   .left-\[60px\] {
     left: 60px;
   }
@@ -217,11 +221,29 @@
   .left-\[440px\] {
     left: 440px;
   }
+  .mt-\[60px\] {
+    margin-top: 60px;
+  }
+  .mr-\[40px\] {
+    margin-right: 40px;
+  }
+  .mr-\[400px\] {
+    margin-right: 400px;
+  }
+  .ml-\[40px\] {
+    margin-left: 40px;
+  }
+  .ml-\[440px\] {
+    margin-left: 440px;
+  }
   .flex {
     display: flex;
   }
   .table {
     display: table;
+  }
+  .h-\[45vh\] {
+    height: 45vh;
   }
   .h-\[70vw\] {
     height: 70vw;
