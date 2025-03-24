@@ -1,0 +1,27 @@
+/*! tailwindcss v4.0.15 | MIT License | https://tailwindcss.com */
+.visible {
+  visibility: visible;
+}
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.place-self-center {
+  place-self: center;
+}
+.place-self-end {
+  place-self: end;
+}
+.text-right {
+  text-align: right;
+}
+@layer componets {
+  .br-shape {
+    clip-path: polygon(100% 0, 100% 96%, 36% 98%, 0 94%, 0 0);
+  }
+}
