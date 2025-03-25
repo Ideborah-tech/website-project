@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class=" flex justify-between mx-auto w-full p-4 relative">
+<nav class="flex justify-between items-center mx-auto w-full p-4 h-16 relative bg-white z-10">
     <!-- Language Section -->
     <div class="font-bold text-black">
         <p>DE</p>
@@ -7,10 +7,10 @@
     </div>
 
     <!-- Logo -->
-    <h2 class="font-bold text-2xl text-black ">Baumeister</h2>
+    <h2 class="font-bold text-2xl text-black">Baumeister</h2>
 
     <!-- Desktop Menu -->
-    <div class="hidden md:flex flex-col space-x-6 font-bold text-black">
+    <div class="hidden md:flex space-x-6 font-bold text-black">
         <a href="#">About</a>
         <a href="#">Services</a>
         <a href="#">References</a>
@@ -18,24 +18,35 @@
     </div>
 
     <!-- Hamburger Icon (Mobile) -->
-    <div class="md:hidden text-white text-3xl cursor-pointer " 
-    id="hamburger" 
-    onclick="document.getElementById('mobileMenu').classList.remove('hidden')">
-   <img src="/src/sections/images/Group 5 (1).png" alt="Menu" class="w-8 h-8" id="openbtn">
-</div>
+    <div class="md:hidden text-black text-3xl cursor-pointer" 
+         id="hamburger" 
+         onclick="toggleMobileMenu()">
+        <img src="/src/sections/images/Group 5 (1).png" alt="Menu" class="w-8 h-8">
+    </div>
 </nav>
 
 <!-- Mobile Menu -->
 <div id="mobileMenu" 
-     class="hidden fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center text-green-700 text-3xl space-y-6">
+     class="hidden fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center text-green-700 text-2xl space-y-6 bg-black bg-opacity-90 z-5">
     
-    <div class="absolute top-5 right-5 text-4xl cursor-pointer"
-         onclick="document.getElementById('mobileMenu').classList.add('hidden');">
+    <div class="absolute top-5 right-5 text-2xl cursor-pointer"
+         onclick="toggleMobileMenu()">
         <img src="/src/sections/images/Group 5 (2).png" alt="">
     </div>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">References</a>
-    <a href="#">Contact</a>
+    <a href="#" class="text-white">About</a>
+    <a href="#" class="text-white">Services</a>
+    <a href="#" class="text-white">References</a>
+    <a href="#" class="text-white">Contact</a>
 </div>
 
+<!-- Inline JavaScript -->
+<script>
+    function toggleMobileMenu() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        const hamburger = document.getElementById('hamburger');
+
+        // Toggle visibility of mobile menu
+        mobileMenu.classList.toggle('hidden');
+        hamburger.classList.toggle('hidden');
+    }
+</script>
