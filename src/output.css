@@ -251,11 +251,17 @@
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
   }
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
+  }
   .mb-16 {
     margin-bottom: calc(var(--spacing) * 16);
   }
   .mb-32 {
     margin-bottom: calc(var(--spacing) * 32);
+  }
+  .mb-\[20vh\] {
+    margin-bottom: 20vh;
   }
   .mb-\[50vh\] {
     margin-bottom: 50vh;
