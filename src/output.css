@@ -489,6 +489,11 @@
       text-align: left;
     }
   }
+  .lg\:top-\[30vh\] {
+    @media (width >= 64rem) {
+      top: 30vh;
+    }
+  }
   .lg\:-mt-\[30vh\] {
     @media (width >= 64rem) {
       margin-top: calc(30vh * -1);
@@ -547,6 +552,11 @@
   .lg\:ml-\[75vw\] {
     @media (width >= 64rem) {
       margin-left: 75vw;
+    }
+  }
+  .xl\:-mt-\[80vh\] {
+    @media (width >= 80rem) {
+      margin-top: calc(80vh * -1);
     }
   }
   .xl\:-mt-\[100vh\] {
