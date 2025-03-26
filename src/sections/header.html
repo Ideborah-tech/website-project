@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="flex justify-between items-center mx-auto w-full p-4 h-16 relative bg-white z-10">
+<nav class="flex justify-between mx-auto w-full p-4 relative">
     <!-- Language Section -->
     <div class="font-bold text-black">
         <p>DE</p>
@@ -10,33 +10,40 @@
     <h2 class="font-bold text-2xl text-black">Baumeister</h2>
 
     <!-- Desktop Menu -->
-    <div class="hidden flex-col md:flex space-x-6 font-bold text-black">
+    <div class="hidden md:flex flex-col space-x-6 font-bold text-black">
         <a href="#">About</a>
         <a href="#">Services</a>
         <a href="#">References</a>
         <a href="#">Contact</a>
     </div>
 
-    <!-- Hamburger Icon (Mobile) -->
-    <div class="md:hidden text-black text-3xl cursor-pointer" 
-         id="hamburger" 
-         onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
-        <img src="/src/sections/images/Group 5 (1).png" alt="Menu" class="">
+    <!-- Mobile Menu Icons (Hamburger & Close) -->
+    <div class="md:hidden relative flex items-center">
+        <!-- Hamburger Icon -->
+        <img src="/src/sections/images/Group 5 (1).png" alt="Menu" class=" cursor-pointer"
+             id="hamburger"
+             onclick="document.getElementById('mobileMenu').classList.remove('hidden');
+                      document.getElementById('hamburger').classList.add('hidden');
+                      document.getElementById('closeBtn').classList.remove('hidden')">
+
     </div>
 </nav>
 
 <!-- Mobile Menu -->
 <div id="mobileMenu" 
-     class="hidden fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center text-green-700 text-2xl space-y-6 z-5">
+     class="hidden fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center text-green-700 text-3xl space-y-6">
     
-    <div class="absolute top-5 right-5 text-2xl cursor-pointer"
-         onclick="document.getElementById('mobileMenu').classList.add('hidden')">
-        <img src="/src/sections/images/Group 5 (2).png" alt="" class="">
+    <!-- Close Button (Absolute in Menu) -->
+    <div class="absolute top-5 right-5">
+        <img src="/src/sections/images/Group 5 (2).png" alt="Close" class=" cursor-pointer"
+             id="closeBtn"
+             onclick="document.getElementById('mobileMenu').classList.add('hidden');
+                      document.getElementById('hamburger').classList.remove('hidden');
+                      document.getElementById('closeBtn').classList.add('hidden')">
     </div>
-    <a href="#" class="text-white">About</a>
-    <a href="#" class="text-white">Services</a>
-    <a href="#" class="text-white">References</a>
-    <a href="#" class="text-white">Contact</a>
-</div>
 
-<!-- Inline JavaScript -->
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">References</a>
+    <a href="#">Contact</a>
+</div>
