@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@layer componets {
+    .br-shape {
+    clip-path: polygon(100% 0, 100% 98%, 25% 100%, 0 98%, 0 0);
+}
+
+}
