@@ -6,7 +6,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-300: oklch(0.808 0.114 19.571);
     --color-blue-800: oklch(0.424 0.199 265.638);
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -266,13 +265,6 @@
   .rounded-3xl {
     border-radius: var(--radius-3xl);
   }
-  .border-3 {
-    border-style: var(--tw-border-style);
-    border-width: 3px;
-  }
-  .border-red-300 {
-    border-color: var(--color-red-300);
-  }
   .text-center {
     text-align: center;
   }
@@ -355,16 +347,6 @@
       margin-top: calc(17vh * -1);
     }
   }
-  .lg\:-mt-\[30vh\] {
-    @media (width >= 64rem) {
-      margin-top: calc(30vh * -1);
-    }
-  }
-  .lg\:-mt-\[50vh\] {
-    @media (width >= 64rem) {
-      margin-top: calc(50vh * -1);
-    }
-  }
   .lg\:-mt-\[70vh\] {
     @media (width >= 64rem) {
       margin-top: calc(70vh * -1);
@@ -378,11 +360,6 @@
   .lg\:-mt-\[100vh\] {
     @media (width >= 64rem) {
       margin-top: calc(100vh * -1);
-    }
-  }
-  .lg\:-mt-\[110vh\] {
-    @media (width >= 64rem) {
-      margin-top: calc(110vh * -1);
     }
   }
   .lg\:mt-16 {
@@ -445,34 +422,9 @@
       font-size: 45px;
     }
   }
-  .xl\:-mt-\[10vh\] {
-    @media (width >= 80rem) {
-      margin-top: calc(10vh * -1);
-    }
-  }
   .xl\:-mt-\[17vh\] {
     @media (width >= 80rem) {
       margin-top: calc(17vh * -1);
-    }
-  }
-  .xl\:-mt-\[30vh\] {
-    @media (width >= 80rem) {
-      margin-top: calc(30vh * -1);
-    }
-  }
-  .xl\:-mt-\[40vh\] {
-    @media (width >= 80rem) {
-      margin-top: calc(40vh * -1);
-    }
-  }
-  .xl\:-mt-\[50vh\] {
-    @media (width >= 80rem) {
-      margin-top: calc(50vh * -1);
-    }
-  }
-  .xl\:-mt-\[60vh\] {
-    @media (width >= 80rem) {
-      margin-top: calc(60vh * -1);
     }
   }
   .xl\:-mt-\[75vh\] {
@@ -515,9 +467,4 @@
       width: 40vw;
     }
   }
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
