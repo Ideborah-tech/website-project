@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/output.css">
     <title>Website project template</title>
+    <link rel="shortcut icon" href="/src/images/pink.png" type="image/x-icon">
 </head>
 <script>
     const loadComponents = (id, url) =>  {
@@ -18,16 +19,31 @@
     window.onload = () => {
         loadComponents('header', 'src/sections/header.html');
         loadComponents('hero', 'src/sections/hero.html');
+        loadComponents('about', 'src/sections/about.html');
         loadComponents('brand', 'src/sections/brand.html');
+        loadComponents('yellow', 'src/sections/yellow.html');
         loadComponents('contact', 'src/sections/contact.html');
         loadComponents('footer', 'src/sections/footer.html');
+
+       
+
     }
+
+  
 </script>
+
 <body>
+   
     <div id="header"></div>
     <div id="hero"></div>
+    <div id="about"></div>
     <div id="brand"></div>
+    <div id="yellow"></div>
     <div id="contact"></div>
     <div id="footer"></div>
+
+
+   
+
 </body>
 </html>
