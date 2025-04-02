@@ -6,16 +6,12 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-yellow-300: oklch(0.905 0.182 98.111);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
-    --text-5xl: 3rem;
-    --text-5xl--line-height: 1;
-    --font-weight-normal: 400;
     --font-weight-semibold: 600;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -164,9 +160,6 @@
   }
 }
 @layer utilities {
-  .visible {
-    visibility: visible;
-  }
   .absolute {
     position: absolute;
   }
@@ -191,29 +184,14 @@
   .m-8 {
     margin: calc(var(--spacing) * 8);
   }
-  .m-40 {
-    margin: calc(var(--spacing) * 40);
-  }
   .mx-auto {
     margin-inline: auto;
   }
   .my-6 {
     margin-block: calc(var(--spacing) * 6);
   }
-  .my-10 {
-    margin-block: calc(var(--spacing) * 10);
-  }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
-  }
-  .mt-14 {
-    margin-top: calc(var(--spacing) * 14);
-  }
-  .mr-4 {
-    margin-right: calc(var(--spacing) * 4);
-  }
-  .mb-14 {
-    margin-bottom: calc(var(--spacing) * 14);
   }
   .ml-20 {
     margin-left: calc(var(--spacing) * 20);
@@ -238,9 +216,6 @@
   .flex-col {
     flex-direction: column;
   }
-  .justify-end {
-    justify-content: flex-end;
-  }
   .gap-16 {
     gap: calc(var(--spacing) * 16);
   }
@@ -250,33 +225,16 @@
   .place-self-center {
     place-self: center;
   }
-  .place-self-end {
-    place-self: end;
-  }
-  .bg-yellow-300 {
-    background-color: var(--color-yellow-300);
-  }
   .p-32 {
     padding: calc(var(--spacing) * 32);
-  }
-  .text-right {
-    text-align: right;
   }
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
-  .text-5xl {
-    font-size: var(--text-5xl);
-    line-height: var(--tw-leading, var(--text-5xl--line-height));
-  }
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
-  }
-  .font-normal {
-    --tw-font-weight: var(--font-weight-normal);
-    font-weight: var(--font-weight-normal);
   }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
@@ -295,39 +253,14 @@
       position: relative;
     }
   }
-  .sm\:m-6 {
-    @media (width >= 40rem) {
-      margin: calc(var(--spacing) * 6);
-    }
-  }
   .sm\:m-10 {
     @media (width >= 40rem) {
       margin: calc(var(--spacing) * 10);
     }
   }
-  .sm\:mr-6 {
-    @media (width >= 40rem) {
-      margin-right: calc(var(--spacing) * 6);
-    }
-  }
   .sm\:grid-cols-1 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
-  }
-  .sm\:flex-col {
-    @media (width >= 40rem) {
-      flex-direction: column;
-    }
-  }
-  .sm\:justify-end {
-    @media (width >= 40rem) {
-      justify-content: flex-end;
-    }
-  }
-  .sm\:p-6 {
-    @media (width >= 40rem) {
-      padding: calc(var(--spacing) * 6);
     }
   }
   .sm\:text-3xl {
@@ -346,11 +279,6 @@
       margin: calc(var(--spacing) * 8);
     }
   }
-  .md\:mr-8 {
-    @media (width >= 48rem) {
-      margin-right: calc(var(--spacing) * 8);
-    }
-  }
   .md\:grid-cols-1 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -359,16 +287,6 @@
   .md\:flex-col {
     @media (width >= 48rem) {
       flex-direction: column;
-    }
-  }
-  .md\:justify-end {
-    @media (width >= 48rem) {
-      justify-content: flex-end;
-    }
-  }
-  .md\:p-8 {
-    @media (width >= 48rem) {
-      padding: calc(var(--spacing) * 8);
     }
   }
   .lg\:relative {
@@ -381,29 +299,9 @@
       margin: calc(var(--spacing) * 10);
     }
   }
-  .lg\:mr-10 {
-    @media (width >= 64rem) {
-      margin-right: calc(var(--spacing) * 10);
-    }
-  }
   .lg\:grid-cols-2 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-  .lg\:flex-col {
-    @media (width >= 64rem) {
-      flex-direction: column;
-    }
-  }
-  .lg\:justify-end {
-    @media (width >= 64rem) {
-      justify-content: flex-end;
-    }
-  }
-  .lg\:p-10 {
-    @media (width >= 64rem) {
-      padding: calc(var(--spacing) * 10);
     }
   }
   .xl\:relative {
@@ -414,26 +312,6 @@
   .xl\:m-10 {
     @media (width >= 80rem) {
       margin: calc(var(--spacing) * 10);
-    }
-  }
-  .xl\:mr-10 {
-    @media (width >= 80rem) {
-      margin-right: calc(var(--spacing) * 10);
-    }
-  }
-  .xl\:flex-col {
-    @media (width >= 80rem) {
-      flex-direction: column;
-    }
-  }
-  .xl\:justify-end {
-    @media (width >= 80rem) {
-      justify-content: flex-end;
-    }
-  }
-  .xl\:p-12 {
-    @media (width >= 80rem) {
-      padding: calc(var(--spacing) * 12);
     }
   }
 }
