@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/output.css">
+    <title>Contact</title>
+
+    <script defer>
+        const loadComponents = (id, url, callback) => {
+            fetch(url)
+            .then(response => {
+                if (!response.ok) throw new Error(`Failed to load ${url} (Status: ${response.status})`);
+                return response.text();
+            })
+            .then(html => {
+                document.getElementById(id).innerHTML = html;
+                if (callback) callback(); // Load next component after the first one
+            })
+            .catch(error => console.error("Error:", error.message));
+        };
+
+        window.onload = () => {
+            loadComponents('header', '/src/sections/header.html');
+            loadComponents('contact', '/src/sections/contact.html', () => {
+                // After `contact.html` is loaded, load `contact-page.html` inside it
+                loadComponents('contact-page-container', '/src/pages/contact-page.html');
+            });
+            loadComponents('footer', '/src/sections/footer.html');
+        };
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="contact"></div>
+    <div id="contact-page-container"></div> 
+    <div id="footer"></div>
+</body>
+</html>
