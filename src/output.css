@@ -177,7 +177,7 @@
   [hidden]:where(:not([hidden="until-found"])) {
     display: none !important;
   }
-
+}
 @layer utilities {
   .absolute {
     position: absolute;
