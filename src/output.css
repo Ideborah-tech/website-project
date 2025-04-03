@@ -356,9 +356,12 @@
   .hidden {
     display: none;
   }
+<<<<<<< HEAD
   .h-\[70vh\] {
     height: 70vh;
   }
+=======
+>>>>>>> a12e1a8 (merge conflict)
   .h-full {
     height: 100%;
   }
@@ -389,6 +392,7 @@
   .max-w-\[1200px\] {
     max-width: 1200px;
   }
+<<<<<<< HEAD
   .max-w-screen-lg {
     max-width: var(--breakpoint-lg);
   }
@@ -398,6 +402,11 @@
   .scroll-mt-44 {
     scroll-margin-top: calc(var(--spacing) * 44);
   }
+=======
+  .cursor-pointer {
+    cursor: pointer;
+  }
+>>>>>>> a12e1a8 (merge conflict)
   .list-disc {
     list-style-type: disc;
   }
@@ -453,6 +462,7 @@
   .rounded-3xl {
     border-radius: var(--radius-3xl);
   }
+<<<<<<< HEAD
   .bg-\[\#EFECEA\] {
     background-color: #EFECEA;
   }
@@ -461,6 +471,10 @@
   }
   .p-6 {
     padding: calc(var(--spacing) * 6);
+=======
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+>>>>>>> a12e1a8 (merge conflict)
   }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
@@ -554,10 +568,6 @@
   }
   .underline {
     text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .hover\:underline {
     &:hover {
@@ -1141,14 +1151,18 @@
   inherits: false;
   initial-value: 0;
 }
+<<<<<<< HEAD
 @property --tw-leading {
   syntax: "*";
   inherits: false;
 }
+=======
+>>>>>>> a12e1a8 (merge conflict)
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
+<<<<<<< HEAD
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
@@ -1163,3 +1177,5 @@
     }
   }
 }
+=======
+>>>>>>> a12e1a8 (merge conflict)
