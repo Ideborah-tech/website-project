@@ -1,6 +1,8 @@
-/*! tailwindcss v4.1.1 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.1.2 | MIT License | https://tailwindcss.com */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@layer properties;
 @layer theme, base, components, utilities;
+<<<<<<< HEAD
 @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
   @layer base {
     *, ::before, ::after, ::backdrop {
@@ -21,14 +23,20 @@
     }
   }
 }
+=======
+>>>>>>> 45a1a57f7e24b5e0b9b1672ea97c89e285ff09c2
 @layer theme {
   :root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+<<<<<<< HEAD
     --color-red-600: oklch(57.7% 0.245 27.325);
     --color-yellow-200: oklch(94.5% 0.129 101.54);
+=======
+    --color-red-400: oklch(70.4% 0.191 22.216);
+>>>>>>> 45a1a57f7e24b5e0b9b1672ea97c89e285ff09c2
     --color-yellow-300: oklch(90.5% 0.182 98.111);
     --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-green-700: oklch(52.7% 0.154 150.069);
@@ -170,7 +178,10 @@
   }
   @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
     ::placeholder {
-      color: color-mix(in oklab, currentColor 50%, transparent);
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
     }
   }
   textarea {
@@ -269,6 +280,7 @@
   .z-20 {
     z-index: 20;
   }
+<<<<<<< HEAD
   .m-2 {
     margin: calc(var(--spacing) * 2);
   }
@@ -281,6 +293,8 @@
   .m-6 {
     margin: calc(var(--spacing) * 6);
   }
+=======
+>>>>>>> 45a1a57f7e24b5e0b9b1672ea97c89e285ff09c2
   .m-8 {
     margin: calc(var(--spacing) * 8);
   }
@@ -477,6 +491,15 @@
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
+  }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
+  .gap-12 {
+    gap: calc(var(--spacing) * 12);
+  }
   .gap-16 {
     gap: calc(var(--spacing) * 16);
   }
@@ -516,8 +539,20 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+<<<<<<< HEAD
   .bg-yellow-200 {
     background-color: var(--color-yellow-200);
+=======
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+  .border-red-400 {
+    border-color: var(--color-red-400);
+  }
+  .bg-\[\#EFECEA\] {
+    background-color: #EFECEA;
+>>>>>>> 45a1a57f7e24b5e0b9b1672ea97c89e285ff09c2
   }
   .bg-yellow-300 {
     background-color: var(--color-yellow-300);
@@ -546,9 +581,12 @@
   .px-20 {
     padding-inline: calc(var(--spacing) * 20);
   }
+<<<<<<< HEAD
   .py-28 {
     padding-block: calc(var(--spacing) * 28);
   }
+=======
+>>>>>>> 45a1a57f7e24b5e0b9b1672ea97c89e285ff09c2
   .py-40 {
     padding-block: calc(var(--spacing) * 40);
   }
@@ -587,8 +625,20 @@
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
   }
+  .text-\[21px\] {
+    font-size: 21px;
+  }
+  .text-\[24px\] {
+    font-size: 24px;
+  }
   .text-\[28px\] {
     font-size: 28px;
+  }
+  .text-\[40px\] {
+    font-size: 40px;
+  }
+  .text-\[400px\] {
+    font-size: 400px;
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -605,6 +655,9 @@
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
+  }
+  .text-\[\#EFECEA\] {
+    color: #EFECEA;
   }
   .text-black {
     color: var(--color-black);
@@ -737,6 +790,16 @@
     @media (width >= 40rem) {
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+  .sm\:text-\[50px\] {
+    @media (width >= 40rem) {
+      font-size: 50px;
+    }
+  }
+  .sm\:text-\[400px\] {
+    @media (width >= 40rem) {
+      font-size: 400px;
     }
   }
   .sm\:font-normal {
@@ -915,10 +978,31 @@
       line-height: var(--tw-leading, var(--text-sm--line-height));
     }
   }
+<<<<<<< HEAD
   .md\:font-semibold {
     @media (width >= 48rem) {
       --tw-font-weight: var(--font-weight-semibold);
       font-weight: var(--font-weight-semibold);
+=======
+  .md\:text-\[40px\] {
+    @media (width >= 48rem) {
+      font-size: 40px;
+    }
+  }
+  .md\:text-\[50px\] {
+    @media (width >= 48rem) {
+      font-size: 50px;
+    }
+  }
+  .md\:text-\[60px\] {
+    @media (width >= 48rem) {
+      font-size: 60px;
+    }
+  }
+  .md\:text-\[400px\] {
+    @media (width >= 48rem) {
+      font-size: 400px;
+>>>>>>> 45a1a57f7e24b5e0b9b1672ea97c89e285ff09c2
     }
   }
   .lg\:relative {
@@ -1091,6 +1175,16 @@
       padding-inline: calc(var(--spacing) * 10);
     }
   }
+  .lg\:px-12 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 12);
+    }
+  }
+  .lg\:px-16 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 16);
+    }
+  }
   .lg\:px-20 {
     @media (width >= 64rem) {
       padding-inline: calc(var(--spacing) * 20);
@@ -1156,9 +1250,15 @@
       margin: calc(var(--spacing) * 10);
     }
   }
+<<<<<<< HEAD
   .xl\:m-40 {
     @media (width >= 80rem) {
       margin: calc(var(--spacing) * 40);
+=======
+  .xl\:m-16 {
+    @media (width >= 80rem) {
+      margin: calc(var(--spacing) * 16);
+>>>>>>> 45a1a57f7e24b5e0b9b1672ea97c89e285ff09c2
     }
   }
   .xl\:-mt-\[17vh\] {
@@ -1329,6 +1429,12 @@
   font-weight: 400;
   font-style: normal;
 }
+.outfit-text {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;
@@ -1388,6 +1494,7 @@
   inherits: false;
   initial-value: solid;
 }
+<<<<<<< HEAD
 @property --tw-text-shadow-color {
   syntax: "*";
   inherits: false;
@@ -1396,4 +1503,23 @@
   syntax: "<percentage>";
   inherits: false;
   initial-value: 100%;
+=======
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+      --tw-rotate-x: rotateX(0);
+      --tw-rotate-y: rotateY(0);
+      --tw-rotate-z: rotateZ(0);
+      --tw-skew-x: skewX(0);
+      --tw-skew-y: skewY(0);
+      --tw-space-y-reverse: 0;
+      --tw-border-style: solid;
+      --tw-font-weight: initial;
+      --tw-outline-style: solid;
+    }
+  }
+>>>>>>> 45a1a57f7e24b5e0b9b1672ea97c89e285ff09c2
 }
