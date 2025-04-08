@@ -28,6 +28,13 @@
   font-style: normal;
 }
 
+.outfit-strongBold {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
 
 /* @layer utilities {
     .max-container {
