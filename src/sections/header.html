@@ -1,19 +1,19 @@
 <!-- Navbar -->
-<nav class="flex justify-between mx-auto w-full p-4 relative">
+<nav class="flex justify-between mx-auto w-full p-4 z-[9999]">
     <!-- Language Section -->
-    <div class="font-bold text-black">
+    <div class="font-normal font-outfit text-2xl text-black">
         <p>DE</p>
         <p>EN</p>
     </div>
 
     <!-- Logo -->
-    <h2 class="font-bold text-2xl text-black">Baumeister</h2>
+    <h1 class="font-semibold font-outfit text-3xl text-black">Baumeister</h1>
 
     <!-- Desktop Menu -->
-    <div class="hidden md:flex flex-col space-y-2 font-bold text-black">
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">References</a>
+    <div class="hidden md:flex flex-col space-y-1 font-normal font-outfit text-2xl text-black ">
+        <a href="/index.html#about">About</a>
+        <a href="/index.html#brand">Services</a>
+        <a href="/index.html#yellow">References</a>
         <a href="/src/sections/contact.html">Contact</a>
     </div>
 
@@ -31,20 +31,20 @@
 
 <!-- Mobile Menu -->
 <div id="mobileMenu" 
-     class="hidden fixed top-0 left-0 w-full h-full  flex flex-col items-center justify-center text-green-700 font-bold text-3xl space-y-6">
+     class="hidden fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center text-green-700 font-bold text-3xl space-y-6 z-[9999]">
     
     <!-- Close Button (Absolute in Menu) -->
     <div class="absolute top-5 right-5">
-        <img src="/src/sections/images/Group 5 (2).png" alt="Close" class=" cursor-pointer"
+        <img src="/src/sections/images/Group 5 (2).png" alt="Close" class=" cursor-pointer font-outfit"
              id="closeBtn"
              onclick="document.getElementById('mobileMenu').classList.add('hidden');
                       document.getElementById('hamburger').classList.remove('hidden');
                       document.getElementById('closeBtn').classList.add('hidden')">
     </div>
 
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">References</a>
+    <a href="/index.html#about">About</a>
+    <a href="/index.html#brand">Services</a>
+    <a href="/index.html#yellow">References</a>
     <a href="/src/sections/contact.html">Contact</a>
 </div>
 
