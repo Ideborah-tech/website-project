@@ -27,6 +27,7 @@
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
+    --font-weight-normal: 400;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --radius-3xl: 1.5rem;
@@ -198,20 +199,17 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .top-4 {
+    top: calc(var(--spacing) * 4);
+  }
   .top-5 {
     top: calc(var(--spacing) * 5);
   }
   .top-10 {
     top: calc(var(--spacing) * 10);
   }
-  .top-14 {
-    top: calc(var(--spacing) * 14);
-  }
   .top-24 {
     top: calc(var(--spacing) * 24);
-  }
-  .top-28 {
-    top: calc(var(--spacing) * 28);
   }
   .top-\[30vh\] {
     top: 30vh;
@@ -228,17 +226,17 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
-  .z-2 {
-    z-index: 2;
-  }
-  .z-4 {
-    z-index: 4;
-  }
   .z-10 {
     z-index: 10;
   }
   .z-20 {
     z-index: 20;
+  }
+  .z-30 {
+    z-index: 30;
+  }
+  .z-\[9999\] {
+    z-index: 9999;
   }
   .m-10 {
     margin: calc(var(--spacing) * 10);
@@ -402,11 +400,11 @@
   .gap-48 {
     gap: calc(var(--spacing) * 48);
   }
-  .space-y-2 {
+  .space-y-1 {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
-      margin-block-start: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));
-      margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)));
+      margin-block-start: calc(calc(var(--spacing) * 1) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 1) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
   .space-y-6 {
@@ -449,6 +447,9 @@
   .px-10 {
     padding-inline: calc(var(--spacing) * 10);
   }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
   .py-28 {
     padding-block: calc(var(--spacing) * 28);
   }
@@ -489,13 +490,26 @@
   .text-\[28px\] {
     font-size: 28px;
   }
+  .text-\[32px\] {
+    font-size: 32px;
+  }
+  .text-\[48px\] {
+    font-size: 48px;
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
+  }
+  .text-\[\#000000\] {
+    color: #000000;
   }
   .text-\[\#EFECEA\] {
     color: #EFECEA;
@@ -758,6 +772,11 @@
       font-size: 21px;
     }
   }
+  .md\:text-\[48px\] {
+    @media (width >= 48rem) {
+      font-size: 48px;
+    }
+  }
   .md\:text-\[50px\] {
     @media (width >= 48rem) {
       font-size: 50px;
@@ -771,11 +790,6 @@
   .lg\:top-\[72vh\] {
     @media (width >= 64rem) {
       top: 72vh;
-    }
-  }
-  .lg\:z-0 {
-    @media (width >= 64rem) {
-      z-index: 0;
     }
   }
   .lg\:m-10 {
@@ -1076,6 +1090,12 @@
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
+  font-style: normal;
+}
+.outfit-strongBold {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
   font-style: normal;
 }
 @property --tw-space-y-reverse {
