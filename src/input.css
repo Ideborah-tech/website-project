@@ -1,3 +1,39 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@import "tailwindcss";
+
+@layer componets {
+  .br-shape {
+  clip-path: polygon(100% 0, 100% 98%, 25% 100%, 0 98%, 0 0);
+}
+
+}
+
+.outfit-regular {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+.outfit-light {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.outfit-bold {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.outfit-strongBold {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+

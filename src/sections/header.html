@@ -1,4 +1,49 @@
-<div>
-    <h1 class="text-blue-800">Header</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam.</p>
+<!-- Navbar -->
+<nav class="fixed top-4 flex justify-between mx-auto w-full px-6 z-30 mb-30">
+    <!-- Language Section -->
+    <div class="font-normal font-outfit text-2xl text-black">
+        <p>DE</p>
+        <p>EN</p>
+    </div>
+
+    <!-- Logo -->
+    <h1 class="outfit-strongBold text-[32px] md:text-[48px] text-[#000000]">Baumeister</h1>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex flex-col font-normal font-outfit text-2xl text-black justify-end">
+        <a href="/index.html#about">About</a>
+        <a href="/index.html#brand">Services</a>
+        <a href="/index.html#yellow">References</a>
+        <a href="/src/sections/contact.html">Contact</a>
+    </div>
+
+    <!-- Mobile Menu Icons (Hamburger & Close) -->
+    <div class="md:hidden relative flex items-center">
+        <!-- Hamburger Icon -->
+        <img src="/src/sections/images/Group 5 (1).png" alt="Menu" class=" cursor-pointer"
+             id="hamburger"
+             onclick="document.getElementById('mobileMenu').classList.remove('hidden');
+                      document.getElementById('hamburger').classList.add('hidden');
+                      document.getElementById('closeBtn').classList.remove('hidden')">
+
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden fixed left-0 w-full h-full flex flex-col items-center top-24 text-green-700 font-bold text-3xl space-y-6 z-[9999]">
+    
+    <!-- Close Button (Absolute in Menu) -->
+    <div class="absolute top-5 right-5">
+        <img src="/src/sections/images/Group 5 (2).png" alt="Close" class=" cursor-pointer font-outfit"
+             id="closeBtn"
+             onclick="document.getElementById('mobileMenu').classList.add('hidden');
+                      document.getElementById('hamburger').classList.remove('hidden');
+                      document.getElementById('closeBtn').classList.add('hidden')">
+    </div>
+
+    <a href="/index.html#about">About</a>
+    <a href="/index.html#brand">Services</a>
+    <a href="/index.html#yellow">References</a>
+    <a href="/src/sections/contact.html">Contact</a>
 </div>
+
